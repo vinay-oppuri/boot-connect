@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Video, Star } from "lucide-react"
 
@@ -44,23 +43,23 @@ const editors = [
 
 export function EditorsPreview() {
     return (
-        <section className="py-24 bg-[#050505] relative border-t border-white/5" id="explore">
-            <div className="container mx-auto px-4 max-w-6xl">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <section className="relative border-t border-white/5 bg-[#050505] py-16 sm:py-24" id="explore">
+            <div className="container mx-auto max-w-6xl px-4">
+                <div className="mb-10 flex flex-col gap-4 sm:mb-12 md:flex-row md:items-end md:justify-between md:gap-6">
                     <div>
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="mb-3 text-2xl font-bold text-white sm:mb-4 sm:text-3xl md:text-5xl">
                             Meet Top Talent
                         </h2>
-                        <p className="text-gray-400 max-w-xl">
+                        <p className="max-w-xl text-sm text-gray-400 sm:text-base">
                             From fast-paced TikToks to feature-length documentaries. Our creators shape the culture.
                         </p>
                     </div>
-                    <Button variant="outline" className="hidden md:flex rounded-full">
+                    <Button variant="outline" className="hidden rounded-full md:flex">
                         View All Editors
                     </Button>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
                     {editors.map((editor, index) => (
                         <motion.div
                             key={index}
@@ -69,38 +68,39 @@ export function EditorsPreview() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: index * 0.1 }}
                         >
-                            <Card className="h-full bg-black/40 border-white/10 hover:border-white/30 flex flex-col justify-between transition-all hover:-translate-y-1">
-                                <CardContent className="p-6 flex flex-col h-full">
+                            <Card className="flex h-full flex-col justify-between border-white/10 bg-black/40 transition-all hover:-translate-y-1 hover:border-white/30">
+                                <CardContent className="flex h-full flex-col p-5 sm:p-6">
                                     <div className="flex-1">
-                                        <div className="flex justify-between items-start mb-6 w-full">
-                                            <Avatar className="w-16 h-16 border-2 border-[#EFFF00]/20 bg-white/5">
+                                        <div className="mb-5 flex w-full items-start justify-between sm:mb-6">
+                                            <Avatar className="h-14 w-14 border-2 border-[#EFFF00]/20 bg-white/5 sm:h-16 sm:w-16">
                                                 <AvatarImage src={editor.image} alt={editor.name} />
                                                 <AvatarFallback>{editor.name[0]}</AvatarFallback>
                                             </Avatar>
-                                            <div className="flex items-center gap-1 bg-white/5 px-2 py-1 rounded-full text-sm">
-                                                <Star className="w-3.5 h-3.5 text-[#EFFF00] fill-current" />
+                                            <div className="flex items-center gap-1 rounded-full bg-white/5 px-2 py-1 text-xs sm:text-sm">
+                                                <Star className="h-3.5 w-3.5 fill-current text-[#EFFF00]" />
                                                 <span className="text-white font-medium">{editor.rating}</span>
                                             </div>
                                         </div>
 
                                         <div className="mb-4 w-full">
-                                            <h3 className="text-xl font-bold text-white mb-1">{editor.name}</h3>
+                                            <h3 className="mb-1 text-lg font-bold text-white sm:text-xl">{editor.name}</h3>
                                             <div className="flex items-center gap-2 text-sm text-gray-400">
-                                                <Video className="w-4 h-4" />
+                                                <Video className="h-4 w-4" />
                                                 {editor.specialty}
                                             </div>
+                                            <p className="mt-2 text-xs text-gray-500 sm:text-sm">{editor.jobs}+ successful projects</p>
                                         </div>
 
-                                        <div className="flex flex-wrap gap-2 mb-6 text-xs w-full">
+                                        <div className="mb-6 flex w-full flex-wrap gap-2 text-[11px] sm:text-xs">
                                             {editor.tags.map(tag => (
-                                                <span key={tag} className="px-2 py-1 rounded-md bg-white/5 text-gray-300 border border-white/5">
+                                                <span key={tag} className="rounded-md border border-white/5 bg-white/5 px-2 py-1 text-gray-300">
                                                     {tag}
                                                 </span>
                                             ))}
                                         </div>
                                     </div>
 
-                                    <Button className="w-full text-black bg-[#EFFF00] hover:bg-[#EFFF00]/90 mt-auto">
+                                    <Button className="mt-auto h-10 w-full bg-[#EFFF00] text-sm text-black hover:bg-[#EFFF00]/90 sm:h-11">
                                         View Profile
                                     </Button>
                                 </CardContent>
@@ -109,7 +109,7 @@ export function EditorsPreview() {
                     ))}
                 </div>
 
-                <Button variant="outline" className="w-full mt-8 md:hidden rounded-full">
+                <Button variant="outline" className="mt-8 h-10 w-full rounded-full text-sm md:hidden">
                     View All Editors
                 </Button>
             </div>

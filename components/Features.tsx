@@ -24,16 +24,16 @@ const features = [
 
 export function Features() {
     return (
-        <section className="py-24 bg-[#050505] relative z-10" id="how-it-works">
-            <div className="container mx-auto px-4 max-w-6xl">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+        <section className="relative z-10 bg-[#050505] py-16 sm:py-24" id="how-it-works">
+            <div className="container mx-auto max-w-6xl px-4">
+                <div className="mb-10 text-center sm:mb-16">
+                    <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl md:text-5xl">
                         Why Boot<span className="text-[#EFFF00]">Connect?</span>
                     </h2>
-                    <p className="text-gray-400">Everything you need to scale your content production.</p>
+                    <p className="mx-auto max-w-xl text-sm text-gray-400 sm:text-base">Everything you need to scale your content production.</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-3 md:gap-8">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
@@ -44,14 +44,14 @@ export function Features() {
                         >
                             <Card className="h-full bg-white/5 border-white/10 hover:border-[#EFFF00]/50 transition-colors group relative overflow-hidden">
                                 <div className="absolute inset-0 bg-linear-to-br from-[#EFFF00]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                <CardHeader>
-                                    <div className="mb-4 bg-black/40 w-16 h-16 rounded-2xl flex items-center justify-center border border-white/10 group-hover:bg-[#EFFF00]/10 transition-colors">
+                                <CardHeader className="p-5 sm:p-6">
+                                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-black/40 transition-colors group-hover:bg-[#EFFF00]/10 sm:h-16 sm:w-16">
                                         {feature.icon}
                                     </div>
-                                    <CardTitle className="text-xl text-white">{feature.title}</CardTitle>
+                                    <CardTitle className="text-lg text-white sm:text-xl">{feature.title}</CardTitle>
                                 </CardHeader>
-                                <CardContent>
-                                    <CardDescription className="text-gray-400 text-base leading-relaxed">
+                                <CardContent className="px-5 pb-5 sm:px-6 sm:pb-6">
+                                    <CardDescription className="text-sm leading-relaxed text-gray-400 sm:text-base">
                                         {feature.description}
                                     </CardDescription>
                                 </CardContent>

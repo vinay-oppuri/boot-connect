@@ -33,11 +33,11 @@ const showcases = [
 
 export function VideoShowcase() {
     return (
-        <section className="py-12 bg-[#050505] overflow-hidden -mt-16 relative z-20">
-            <div className="flex overflow-hidden pb-8 relative w-full">
+        <section className="relative z-20 -mt-10 overflow-hidden bg-[#050505] py-8 sm:-mt-16 sm:py-12">
+            <div className="relative flex w-full overflow-hidden pb-6 sm:pb-8">
                 {/* Gradient Masks for smooth edge fading */}
-                <div className="absolute left-0 w-24 h-full bg-linear-to-r from-[#050505] to-transparent z-30 pointer-events-none" />
-                <div className="absolute right-0 w-24 h-full bg-linear-to-l from-[#050505] to-transparent z-30 pointer-events-none" />
+                <div className="pointer-events-none absolute left-0 z-30 h-full w-12 bg-linear-to-r from-[#050505] to-transparent sm:w-24" />
+                <div className="pointer-events-none absolute right-0 z-30 h-full w-12 bg-linear-to-l from-[#050505] to-transparent sm:w-24" />
 
                 <motion.div
                     animate={{ x: ["0%", "-50%"] }}
@@ -46,12 +46,12 @@ export function VideoShowcase() {
                         ease: "linear",
                         duration: 35,
                     }}
-                    className="flex gap-4 px-4 w-max shrink-0 hover:[animation-play-state:paused]"
+                    className="flex w-max shrink-0 gap-3 px-4 hover:[animation-play-state:paused] sm:gap-4"
                 >
                     {[...showcases, ...showcases].map((item, index) => (
                         <div
                             key={index}
-                            className="group relative min-w-[280px] sm:min-w-[320px] max-w-[400px] h-[200px] rounded-xl overflow-hidden cursor-pointer shrink-0 border border-white/5"
+                            className="group relative h-[170px] min-w-[240px] max-w-[400px] shrink-0 cursor-pointer overflow-hidden rounded-xl border border-white/5 sm:h-[200px] sm:min-w-[320px]"
                         >
                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10 duration-500" />
                             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent z-10" />
@@ -62,15 +62,15 @@ export function VideoShowcase() {
                                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
                             />
 
-                            <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-50 group-hover:scale-100">
-                                <div className="w-12 h-12 rounded-full bg-[#EFFF00]/90 flex items-center justify-center backdrop-blur-sm shadow-[0_0_20px_rgba(239,255,0,0.5)]">
-                                    <Play className="w-5 h-5 text-black ml-1" fill="currentColor" />
+                            <div className="absolute inset-0 z-20 flex scale-50 items-center justify-center opacity-0 transition-opacity duration-300 group-hover:scale-100 group-hover:opacity-100">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EFFF00]/90 shadow-[0_0_20px_rgba(239,255,0,0.5)] backdrop-blur-sm sm:h-12 sm:w-12">
+                                    <Play className="ml-0.5 h-4 w-4 text-black sm:ml-1 sm:h-5 sm:w-5" fill="currentColor" />
                                 </div>
                             </div>
 
-                            <div className="absolute bottom-4 left-4 right-4 z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                                <div className="text-xs font-semibold text-[#EFFF00] mb-1">{item.category}</div>
-                                <h3 className="text-lg font-bold text-white">{item.title}</h3>
+                            <div className="absolute right-4 bottom-4 left-4 z-20 translate-y-2 transform transition-transform duration-300 group-hover:translate-y-0">
+                                <div className="mb-1 text-[11px] font-semibold text-[#EFFF00] sm:text-xs">{item.category}</div>
+                                <h3 className="text-base font-bold text-white sm:text-lg">{item.title}</h3>
                             </div>
                         </div>
                     ))}

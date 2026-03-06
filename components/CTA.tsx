@@ -6,38 +6,38 @@ import { ArrowRight } from "lucide-react"
 
 export function CTA() {
     return (
-        <section className="py-32 bg-[#050505] relative overflow-hidden" id="hire">
+        <section className="relative overflow-hidden bg-[#050505] py-20 sm:py-32" id="hire">
             {/* Background glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#EFFF00]/10 rounded-full blur-[150px] pointer-events-none" />
+            <div className="pointer-events-none absolute top-1/2 left-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#EFFF00]/10 blur-[150px] sm:h-[600px] sm:w-[600px]" />
 
-            <div className="container mx-auto px-4 relative z-10 text-center">
+            <div className="container relative z-10 mx-auto px-4 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+                    <h2 className="mb-5 text-3xl font-extrabold tracking-tight text-white sm:mb-6 sm:text-5xl md:text-7xl">
                         Ready to upgrade <br /> your videos?
                     </h2>
 
-                    <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                    <p className="mx-auto mb-8 max-w-xl text-sm leading-7 text-gray-400 sm:mb-12 sm:max-w-2xl sm:text-lg md:text-xl">
                         Join the creators and brands who have already scaled their YouTube channels and socials with our elite editors.
                     </p>
 
                     <Button
                         size="lg"
-                        className="rounded-full px-8 text-lg font-bold shadow-[0_0_20px_rgba(239,255,0,0.4)] hover:shadow-[0_0_40px_rgba(239,255,0,0.6)] transition-all h-14"
+                        className="h-11 rounded-full px-6 text-sm font-bold shadow-[0_0_20px_rgba(239,255,0,0.4)] transition-all hover:shadow-[0_0_40px_rgba(239,255,0,0.6)] sm:h-12 sm:px-8 sm:text-base md:h-14 md:text-lg"
                     >
                         Start Hiring Editors
-                        <ArrowRight className="ml-2 w-5 h-5" />
+                        <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                     </Button>
                 </motion.div>
             </div>
 
             {/* Footer minimal */}
-            <div className="absolute bottom-8 left-0 right-0 text-center text-sm text-gray-600">
-                <p>© {new Date().getFullYear()} EditHive. Not a generic marketplace.</p>
+            <div className="absolute right-0 bottom-6 left-0 px-4 text-center text-xs text-gray-600 sm:bottom-8 sm:text-sm">
+                <p>{`\u00A9 ${new Date().getFullYear()} EditHive. Not a generic marketplace.`}</p>
             </div>
         </section>
     )
