@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function Hero() {
     return (
@@ -14,11 +15,10 @@ export function Hero() {
                 <div className="absolute top-1/3 right-1/4 h-[280px] w-[280px] rounded-full bg-white/5 blur-[100px] -z-10 sm:h-[400px] sm:w-[400px]"></div>
             </div>
 
-            <div className="container relative z-10 mx-auto flex flex-col items-center px-4 text-center">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+            <div className="container relative z-10 mx-auto flex flex-col items-center px-6 md:px-4 text-center">
+                <Link
+                    href = 'https://www.instagram.com/jashwanth.naikk/'
+                    target="_blank"
                     className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-300 backdrop-blur-sm sm:mb-6 sm:px-4 sm:py-1.5 sm:text-sm"
                 >
                     <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#EFFF00] text-black sm:h-5 sm:w-5">
@@ -29,13 +29,13 @@ export function Hero() {
                         />
                     </span>
                     Jashwanth presents
-                </motion.div>
+                </Link>
 
                 <motion.h1
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="mx-auto max-w-4xl text-3xl leading-[1.05] font-extrabold tracking-tight text-white sm:text-5xl md:text-7xl"
+                    className="mx-auto max-w-4xl text-4xl leading-[1.05] font-extrabold tracking-tight text-white sm:text-5xl md:text-7xl"
                 >
                     NOT JUST A{" "}
                     <span className="mt-2 block text-[#EFFF00] drop-shadow-[0_0_15px_rgba(239,255,0,0.5)]">

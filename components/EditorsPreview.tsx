@@ -44,7 +44,7 @@ const editors = [
 export function EditorsPreview() {
     return (
         <section className="relative border-t border-white/5 bg-[#050505] py-16 sm:py-24" id="explore">
-            <div className="container mx-auto max-w-6xl px-4">
+            <div className="container mx-auto max-w-6xl px-6 md:px-4">
                 <div className="mb-10 flex flex-col gap-4 sm:mb-12 md:flex-row md:items-end md:justify-between md:gap-6">
                     <div>
                         <h2 className="mb-3 text-2xl font-bold text-white sm:mb-4 sm:text-3xl md:text-5xl">

@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar"
 import { Hero } from "@/components/Hero"
 import { VideoShowcase } from "@/components/VideoShowcase"
 import { Experience } from "@/components/Experience"
@@ -10,7 +9,6 @@ import { CTA } from "@/components/CTA"
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#050505] text-white font-sans selection:bg-[#EFFF00] selection:text-black">
-      <Navbar />
       <Hero />
       <VideoShowcase />
       <Experience />

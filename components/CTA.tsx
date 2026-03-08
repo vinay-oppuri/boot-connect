@@ -7,10 +7,9 @@ import { ArrowRight } from "lucide-react"
 export function CTA() {
     return (
         <section className="relative overflow-hidden bg-[#050505] py-20 sm:py-32" id="hire">
-            {/* Background glow */}
             <div className="pointer-events-none absolute top-1/2 left-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#EFFF00]/10 blur-[150px] sm:h-[600px] sm:w-[600px]" />
 
-            <div className="container relative z-10 mx-auto px-4 text-center">
+            <div className="container relative z-10 mx-auto px-6 md:px-4 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -33,11 +32,6 @@ export function CTA() {
                         <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                     </Button>
                 </motion.div>
-            </div>
-
-            {/* Footer minimal */}
-            <div className="absolute right-0 bottom-6 left-0 px-4 text-center text-xs text-gray-600 sm:bottom-8 sm:text-sm">
-                <p>{`\u00A9 ${new Date().getFullYear()} EditHive. Not a generic marketplace.`}</p>
             </div>
         </section>
     )
