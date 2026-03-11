@@ -33,12 +33,8 @@ const showcases = [
 
 export function VideoShowcase() {
     return (
-        <section className="relative z-20 -mt-10 overflow-hidden bg-transparent py-8 sm:-mt-16 sm:py-12">
+        <section className="relative z-20 overflow-hidden bg-transparent py-8 sm:py-12">
             <div className="relative flex w-full overflow-hidden pb-6 sm:pb-8">
-                {/* Gradient Masks for smooth edge fading */}
-                <div className="pointer-events-none absolute left-0 z-30 h-full w-12 bg-linear-to-r from-black/70 to-transparent sm:w-24" />
-                <div className="pointer-events-none absolute right-0 z-30 h-full w-12 bg-linear-to-l from-black/70 to-transparent sm:w-24" />
-
                 <motion.div
                     animate={{ x: ["0%", "-50%"] }}
                     transition={{
@@ -63,13 +59,13 @@ export function VideoShowcase() {
                             />
 
                             <div className="absolute inset-0 z-20 flex scale-50 items-center justify-center opacity-0 transition-opacity duration-300 group-hover:scale-100 group-hover:opacity-100">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EFFF00]/90 shadow-[0_0_20px_rgba(239,255,0,0.5)] backdrop-blur-sm sm:h-12 sm:w-12">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/90 shadow-[0_0_8px_rgba(239,255,0,0.25)] backdrop-blur-sm sm:h-12 sm:w-12">
                                     <Play className="ml-0.5 h-4 w-4 text-black sm:ml-1 sm:h-5 sm:w-5" fill="currentColor" />
                                 </div>
                             </div>
 
                             <div className="absolute right-4 bottom-4 left-4 z-20 translate-y-2 transform transition-transform duration-300 group-hover:translate-y-0">
-                                <div className="mb-1 text-[11px] font-semibold text-[#EFFF00] sm:text-xs">{item.category}</div>
+                                <div className="mb-1 text-[11px] font-semibold text-primary sm:text-xs">{item.category}</div>
                                 <h3 className="text-base font-bold text-white sm:text-lg">{item.title}</h3>
                             </div>
                         </div>

@@ -17,17 +17,8 @@ const navItems = [
 ]
 
 export function Navbar() {
-    const [scrolled, setScrolled] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
     const pathname = usePathname()
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 20)
-        }
-        window.addEventListener("scroll", handleScroll)
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
 
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : ""
@@ -41,18 +32,11 @@ export function Navbar() {
         <motion.header
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            className={cn(
-                "fixed top-0 z-50 w-full transition-all duration-300",
-                scrolled ? "py-3 sm:py-4" : "py-4 sm:py-6"
-            )}
+            className="fixed top-0 z-50 w-full transition-all duration-300 py-4 sm:py-6"
         >
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-linear-to-b from-background to-transparent -z-10" />
             <div className="container mx-auto max-w-6xl px-4">
-                <div
-                    className={cn(
-                        "flex items-center justify-between rounded-full border border-white/10 px-3 py-2.5 shadow-lg backdrop-blur-md sm:px-3.5 sm:py-3",
-                        scrolled ? "bg-black/70" : "bg-black/25"
-                    )}
-                >
+                <div className="flex items-center justify-between rounded-full border border-border bg-black/25 px-3 py-2.5 shadow-lg backdrop-blur-md sm:px-3.5 sm:py-3">
                     <Link
                         href="/"
                         className="ml-2 flex items-center gap-2 sm:ml-4"
@@ -63,7 +47,7 @@ export function Navbar() {
                         }}
                     >
                         <span className="text-base font-bold tracking-tight text-white sm:text-xl">
-                            Boot<span className="text-[#EFFF00]">Connect</span>
+                            Boot<span className="text-primary">Connect</span>
                         </span>
                     </Link>
 
@@ -72,7 +56,7 @@ export function Navbar() {
                             <Link
                                 key={item.label}
                                 href={item.href}
-                                className="rounded-full px-4 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
+                                className="rounded-full px-4 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-card/50 hover:text-white"
                                 onClick={() => {
                                     if (item.href === "/" && pathname === "/") {
                                         window.scrollTo({ top: 0, behavior: "smooth" })
@@ -88,7 +72,7 @@ export function Navbar() {
                         <Button
                             asChild
                             size="sm"
-                            className="hidden h-10 rounded-full px-5 text-sm font-semibold shadow-[0_0_18px_rgba(239,255,0,0.28)] transition-all hover:shadow-[0_0_32px_rgba(239,255,0,0.5)] md:inline-flex"
+                            className="hidden h-10 rounded-full px-5 text-sm font-semibold shadow-[0_0_7px_rgba(239,255,0,0.14)] transition-all hover:shadow-[0_0_12px_rgba(239,255,0,0.25)] md:inline-flex"
                         >
                             <Link href="/join" aria-current={pathname === "/join" ? "page" : undefined}>
                                 Join as Editor
@@ -100,7 +84,7 @@ export function Navbar() {
                             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
                             aria-expanded={menuOpen}
                             onClick={() => setMenuOpen((open) => !open)}
-                            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 md:hidden"
+                            className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/50 text-white transition-colors hover:bg-white/10 md:hidden"
                         >
                             {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
                         </button>
@@ -116,13 +100,13 @@ export function Navbar() {
                             transition={{ duration: 0.2 }}
                             className="md:hidden"
                         >
-                            <div className="mt-3 overflow-hidden rounded-[28px] border border-white/10 bg-black/90 p-3 shadow-2xl backdrop-blur-xl">
+                            <div className="mt-3 overflow-hidden rounded-[28px] border border-border bg-black/90 p-3 shadow-2xl backdrop-blur-xl">
                                 <nav className="flex flex-col gap-1">
                                     {navItems.map((item) => (
                                         <Link
                                             key={item.label}
                                             href={item.href}
-                                            className="rounded-2xl px-4 py-3 text-sm font-medium text-gray-200 transition-colors hover:bg-white/5 hover:text-white"
+                                            className="rounded-2xl px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-card/50 hover:text-white"
                                             onClick={() => {
                                                 setMenuOpen(false)
 
@@ -135,10 +119,10 @@ export function Navbar() {
                                         </Link>
                                     ))}
                                 </nav>
-                                <div className="mt-3 border-t border-white/10 pt-3">
+                                <div className="mt-3 border-t border-border pt-3">
                                     <Button
                                         asChild
-                                        className="h-11 w-full rounded-full text-sm font-semibold shadow-[0_0_18px_rgba(239,255,0,0.28)] transition-all hover:shadow-[0_0_32px_rgba(239,255,0,0.5)]"
+                                        className="h-11 w-full rounded-full text-sm font-semibold shadow-[0_0_7px_rgba(239,255,0,0.14)] transition-all hover:shadow-[0_0_12px_rgba(239,255,0,0.25)]"
                                     >
                                         <Link href="/join" onClick={() => setMenuOpen(false)}>
                                             Join as Editor

@@ -43,14 +43,14 @@ const editors = [
 
 export function EditorsPreview() {
     return (
-        <section className="relative border-t border-white/5 bg-transparent py-16 sm:py-24" id="explore">
+        <section className="relative bg-transparent py-16 sm:py-24" id="explore">
             <div className="container mx-auto max-w-6xl px-6 md:px-4">
                 <div className="mb-10 flex flex-col gap-4 sm:mb-12 md:flex-row md:items-end md:justify-between md:gap-6">
                     <div>
                         <h2 className="mb-3 text-2xl font-bold text-white sm:mb-4 sm:text-3xl md:text-5xl">
                             Meet Top Talent
                         </h2>
-                        <p className="max-w-xl text-sm text-gray-400 sm:text-base">
+                        <p className="max-w-xl text-sm text-muted-foreground sm:text-base">
                             From fast-paced TikToks to feature-length documentaries. Our creators shape the culture.
                         </p>
                     </div>
@@ -68,39 +68,39 @@ export function EditorsPreview() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: index * 0.1 }}
                         >
-                            <Card className="flex h-full flex-col justify-between border-white/10 bg-black/40 transition-all hover:-translate-y-1 hover:border-white/30">
+                            <Card className="flex h-full flex-col justify-between border-border bg-black/40 transition-all hover:-translate-y-1 hover:border-white/30">
                                 <CardContent className="flex h-full flex-col p-5 sm:p-6">
                                     <div className="flex-1">
                                         <div className="mb-5 flex w-full items-start justify-between sm:mb-6">
-                                            <Avatar className="h-14 w-14 border-2 border-[#EFFF00]/20 bg-white/5 sm:h-16 sm:w-16">
+                                            <Avatar className="h-14 w-14 border-2 border-primary/20 bg-card/50 sm:h-16 sm:w-16">
                                                 <AvatarImage src={editor.image} alt={editor.name} />
                                                 <AvatarFallback>{editor.name[0]}</AvatarFallback>
                                             </Avatar>
-                                            <div className="flex items-center gap-1 rounded-full bg-white/5 px-2 py-1 text-xs sm:text-sm">
-                                                <Star className="h-3.5 w-3.5 fill-current text-[#EFFF00]" />
+                                            <div className="flex items-center gap-1 rounded-full bg-card/50 px-2 py-1 text-xs sm:text-sm">
+                                                <Star className="h-3.5 w-3.5 fill-current text-primary" />
                                                 <span className="text-white font-medium">{editor.rating}</span>
                                             </div>
                                         </div>
 
                                         <div className="mb-4 w-full">
                                             <h3 className="mb-1 text-lg font-bold text-white sm:text-xl">{editor.name}</h3>
-                                            <div className="flex items-center gap-2 text-sm text-gray-400">
+                                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
                                                 <Video className="h-4 w-4" />
                                                 {editor.specialty}
                                             </div>
-                                            <p className="mt-2 text-xs text-gray-500 sm:text-sm">{editor.jobs}+ successful projects</p>
+                                            <p className="mt-2 text-xs text-muted-foreground sm:text-sm">{editor.jobs}+ successful projects</p>
                                         </div>
 
                                         <div className="mb-6 flex w-full flex-wrap gap-2 text-[11px] sm:text-xs">
                                             {editor.tags.map(tag => (
-                                                <span key={tag} className="rounded-md border border-white/5 bg-white/5 px-2 py-1 text-gray-300">
+                                                <span key={tag} className="rounded-md border border-white/5 bg-card/50 px-2 py-1 text-gray-300">
                                                     {tag}
                                                 </span>
                                             ))}
                                         </div>
                                     </div>
 
-                                    <Button className="mt-auto h-10 w-full bg-[#EFFF00] text-sm text-black hover:bg-[#EFFF00]/90 sm:h-11">
+                                    <Button className="mt-auto h-10 w-full bg-primary text-sm text-black hover:bg-primary/90 sm:h-11">
                                         View Profile
                                     </Button>
                                 </CardContent>

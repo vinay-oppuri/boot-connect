@@ -55,36 +55,36 @@ export default function HirePage() {
                         transition={{ duration: 0.5 }}
                         className="max-w-2xl"
                     >
-                        <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[10px] font-semibold tracking-[0.2em] text-gray-200 uppercase">
+                        <div className="inline-flex items-center rounded-full border border-border bg-card/50 px-4 py-1.5 text-[10px] font-semibold tracking-[0.2em] text-foreground uppercase">
                             BootConnect Creatives
                         </div>
                         <h1 className="mt-6 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
                             Scale your content.
                         </h1>
-                        <h2 className="mt-2 text-3xl font-extrabold leading-tight tracking-tight text-[#EFFF00] drop-shadow-[0_0_15px_rgba(239,255,0,0.5)] sm:text-4xl md:text-5xl">
+                        <h2 className="mt-2 text-3xl font-extrabold leading-tight tracking-tight text-primary drop-shadow-[0_0_6px_rgba(239,255,0,0.25)] sm:text-4xl md:text-5xl">
                             Hire a top-tier editor.
                         </h2>
-                        <p className="mt-6 max-w-xl text-sm leading-6 text-gray-400 sm:text-base">
+                        <p className="mt-6 max-w-xl text-sm leading-6 text-muted-foreground sm:text-base">
                             Stop wasting hours sifting through portfolios. Tell us exactly what you need, and we&apos;ll match you with a vetted professional from our curated network of video editors, thumbnail designers, and copywriters.
                         </p>
 
                         <div className="mt-8 grid gap-4 sm:grid-cols-3">
                             {hireBenefits.map((item) => (
-                                <div key={item.title} className="rounded-[28px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
+                                <div key={item.title} className="rounded-[28px] border border-border bg-card/50 p-5 backdrop-blur-sm">
                                     <h3 className="text-base font-semibold text-white sm:text-lg">{item.title}</h3>
-                                    <p className="mt-2 text-xs leading-5 text-gray-400 sm:text-sm">{item.description}</p>
+                                    <p className="mt-2 text-xs leading-5 text-muted-foreground sm:text-sm">{item.description}</p>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="mt-8 rounded-[32px] border border-white/10 bg-black/30 p-6 sm:p-8">
-                            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">
+                        <div className="mt-8 rounded-[32px] border border-border bg-black/30 p-6 sm:p-8">
+                            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
                                 How hiring works
                             </p>
                             <ul className="mt-5 space-y-4">
                                 {hireSteps.map((step) => (
                                     <li key={step} className="flex items-start gap-3 text-xs leading-5 text-gray-300 sm:text-sm">
-                                        <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#EFFF00]" />
+                                        <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                                         <span>{step}</span>
                                     </li>
                                 ))}
@@ -93,15 +93,15 @@ export default function HirePage() {
                     </motion.div>
 
                     {/* Right Column: Form */}
-                    <div className="rounded-[32px] border border-white/10 bg-white/6 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-8">
+                    <div className="rounded-[32px] border border-border bg-white/6 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-8">
                         <div className="mb-8">
-                            <p className="text-xs font-semibold tracking-[0.28em] uppercase text-gray-500">
+                            <p className="text-xs font-semibold tracking-[0.28em] uppercase text-muted-foreground">
                                 Project Brief
                             </p>
                             <h2 className="mt-3 text-xl font-bold text-white sm:text-2xl">
                                 Tell us about your needs
                             </h2>
-                            <p className="mt-3 text-xs leading-5 text-gray-400 sm:text-sm">
+                            <p className="mt-3 text-xs leading-5 text-muted-foreground sm:text-sm">
                                 Fill out the details below to help us find the perfect creative match for your brand and budget.
                             </p>
                         </div>
@@ -112,11 +112,11 @@ export default function HirePage() {
                                 animate={{ scale: 1, opacity: 1 }}
                                 className="flex flex-col items-center justify-center py-16 text-center"
                             >
-                                <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[#EFFF00]/10">
-                                    <CheckCircle2 className="h-12 w-12 text-[#EFFF00]" />
+                                <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-primary/10">
+                                    <CheckCircle2 className="h-12 w-12 text-primary" />
                                 </div>
                                 <h2 className="mb-3 text-2xl font-bold md:text-3xl">Request Submitted!</h2>
-                                <p className="mb-8 max-w-sm text-base text-gray-400 md:text-lg">
+                                <p className="mb-8 max-w-sm text-base text-muted-foreground md:text-lg">
                                     We&apos;ve successfully received your inquiry. Our team will review the details and connect you with an expert editor shortly.
                                 </p>
                                 <Button
@@ -132,28 +132,28 @@ export default function HirePage() {
                                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                                     {/* Name Input */}
                                     <div>
-                                        <label htmlFor="name" className="text-xs font-medium text-gray-200">
+                                        <label htmlFor="name" className="text-xs font-medium text-foreground">
                                             Name <span className="text-red-500">*</span>
                                         </label>
                                         <Input
                                             type="text"
                                             id="name"
                                             required
-                                            className="mt-2 h-11 w-full rounded-lg border border-white/10 bg-black/40 px-4 text-sm text-white outline-none transition placeholder:text-gray-500 focus:border-[#EFFF00]/50 focus:bg-black/60 shadow-none focus-visible:ring-0"
+                                            className="mt-2 h-11 w-full rounded-lg border border-border bg-black/40 px-4 text-sm text-white outline-none transition placeholder:text-muted-foreground focus:border-primary/50 focus:bg-black/60 shadow-none focus-visible:ring-0"
                                             placeholder="Your full name"
                                         />
                                     </div>
 
                                     {/* Email Input */}
                                     <div>
-                                        <label htmlFor="email" className="text-xs font-medium text-gray-200">
+                                        <label htmlFor="email" className="text-xs font-medium text-foreground">
                                             Email <span className="text-red-500">*</span>
                                         </label>
                                         <Input
                                             type="email"
                                             id="email"
                                             required
-                                            className="mt-2 h-11 w-full rounded-lg border border-white/10 bg-black/40 px-4 text-sm text-white outline-none transition placeholder:text-gray-500 focus:border-[#EFFF00]/50 focus:bg-black/60 shadow-none focus-visible:ring-0"
+                                            className="mt-2 h-11 w-full rounded-lg border border-border bg-black/40 px-4 text-sm text-white outline-none transition placeholder:text-muted-foreground focus:border-primary/50 focus:bg-black/60 shadow-none focus-visible:ring-0"
                                             placeholder="you@example.com"
                                         />
                                     </div>
@@ -161,14 +161,14 @@ export default function HirePage() {
 
                                 {/* Type of Editor */}
                                 <div>
-                                    <label htmlFor="type" className="text-xs font-medium text-gray-200">
+                                    <label htmlFor="type" className="text-xs font-medium text-foreground">
                                         Type of Editor Needed <span className="text-red-500">*</span>
                                     </label>
                                     <Select required name="type">
-                                        <SelectTrigger id="type" className="mt-2 h-11 w-full rounded-lg border border-white/10 bg-black/40 px-4 text-sm text-white outline-none transition data-placeholder:text-gray-500 focus:border-[#EFFF00]/50 focus:bg-black/60 shadow-none focus:ring-0">
+                                        <SelectTrigger id="type" className="mt-2 h-11 w-full rounded-lg border border-border bg-black/40 px-4 text-sm text-white outline-none transition data-placeholder:text-muted-foreground focus:border-primary/50 focus:bg-black/60 shadow-none focus:ring-0">
                                             <SelectValue placeholder="Select editor type..." />
                                         </SelectTrigger>
-                                        <SelectContent className="bg-[#111] border-white/10 text-white rounded-xl shadow-2xl">
+                                        <SelectContent className="bg-card border-border text-white rounded-xl shadow-2xl">
                                             <SelectItem value="video" className="py-2.5 px-4 cursor-pointer text-sm">Video Editor (YouTube, TikTok, Reels)</SelectItem>
                                             <SelectItem value="thumbnail" className="py-2.5 px-4 cursor-pointer text-sm">Thumbnail Designer</SelectItem>
                                             <SelectItem value="copywriter" className="py-2.5 px-4 cursor-pointer text-sm">Script Writer / Copywriter</SelectItem>
@@ -181,14 +181,14 @@ export default function HirePage() {
                                 {/* Budget and Timeline */}
                                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                                     <div>
-                                        <label htmlFor="budget" className="text-xs font-medium text-gray-200">
+                                        <label htmlFor="budget" className="text-xs font-medium text-foreground">
                                             Estimated Budget
                                         </label>
                                         <Select name="budget">
-                                            <SelectTrigger id="budget" className="mt-2 h-11! w-full rounded-lg border border-white/10 bg-black/40 px-4 text-sm text-white outline-none transition data-placeholder:text-gray-500 focus:border-[#EFFF00]/50 focus:bg-black/60 shadow-none focus:ring-0">
+                                            <SelectTrigger id="budget" className="mt-2 h-11! w-full rounded-lg border border-border bg-black/40 px-4 text-sm text-white outline-none transition data-placeholder:text-muted-foreground focus:border-primary/50 focus:bg-black/60 shadow-none focus:ring-0">
                                                 <SelectValue placeholder="Select budget..." />
                                             </SelectTrigger>
-                                            <SelectContent className="bg-[#111] border-white/10 text-white rounded-xl shadow-2xl">
+                                            <SelectContent className="bg-card border-border text-white rounded-xl shadow-2xl">
                                                 <SelectItem value="<500" className="py-2.5 px-4 cursor-pointer text-sm">Less than $500</SelectItem>
                                                 <SelectItem value="500-1k" className="py-2.5 px-4 cursor-pointer text-sm">$500 - $1,000</SelectItem>
                                                 <SelectItem value="1k-5k" className="py-2.5 px-4 cursor-pointer text-sm">$1,000 - $5,000</SelectItem>
@@ -199,13 +199,13 @@ export default function HirePage() {
                                     </div>
 
                                     <div>
-                                        <label htmlFor="timeline" className="text-xs font-medium text-gray-200">
+                                        <label htmlFor="timeline" className="text-xs font-medium text-foreground">
                                             Expected Timeline
                                         </label>
                                         <Input
                                             type="text"
                                             id="timeline"
-                                            className="mt-2 h-11 w-full rounded-lg border border-white/10 bg-black/40 px-4 text-sm text-white outline-none transition placeholder:text-gray-500 focus:border-[#EFFF00]/50 focus:bg-black/60 shadow-none focus-visible:ring-0"
+                                            className="mt-2 h-11 w-full rounded-lg border border-border bg-black/40 px-4 text-sm text-white outline-none transition placeholder:text-muted-foreground focus:border-primary/50 focus:bg-black/60 shadow-none focus-visible:ring-0"
                                             placeholder="e.g. 1 week, ASAP, etc."
                                         />
                                     </div>
@@ -213,34 +213,34 @@ export default function HirePage() {
 
                                 {/* Project Details */}
                                 <div>
-                                    <label htmlFor="details" className="text-xs font-medium text-gray-200">
+                                    <label htmlFor="details" className="text-xs font-medium text-foreground">
                                         Project Details / Requirements <span className="text-red-500">*</span>
                                     </label>
                                     <Textarea
                                         id="details"
                                         required
                                         rows={4}
-                                        className="mt-2 min-h-24 w-full rounded-lg border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-500 focus:border-[#EFFF00]/50 focus:bg-black/60 shadow-none focus-visible:ring-0 resize-y custom-scrollbar"
+                                        className="mt-2 min-h-24 w-full rounded-lg border border-border bg-black/40 px-4 py-3 text-sm text-white outline-none transition placeholder:text-muted-foreground focus:border-primary/50 focus:bg-black/60 shadow-none focus-visible:ring-0 resize-y custom-scrollbar"
                                         placeholder="Tell us about your project, style preferences, and any specific goals..."
                                     />
                                 </div>
 
                                 {/* Links */}
                                 <div>
-                                    <label htmlFor="links" className="text-xs font-medium text-gray-200">
+                                    <label htmlFor="links" className="text-xs font-medium text-foreground">
                                         Reference Links (Optional)
                                     </label>
                                     <Input
                                         type="text"
                                         id="links"
-                                        className="mt-2 h-11 w-full rounded-lg border border-white/10 bg-black/40 px-4 text-sm text-white outline-none transition placeholder:text-gray-500 focus:border-[#EFFF00]/50 focus:bg-black/60 shadow-none focus-visible:ring-0"
+                                        className="mt-2 h-11 w-full rounded-lg border border-border bg-black/40 px-4 text-sm text-white outline-none transition placeholder:text-muted-foreground focus:border-primary/50 focus:bg-black/60 shadow-none focus-visible:ring-0"
                                         placeholder="Links to examples, your current channel, or reference material"
                                     />
                                 </div>
 
                                 <Button
                                     type="submit"
-                                    className="group mt-8 flex h-11 w-full items-center justify-center gap-2 rounded-full text-sm font-semibold text-black shadow-[0_0_20px_rgba(239,255,0,0.35)] transition-transform hover:scale-[1.02] hover:shadow-[0_0_34px_rgba(239,255,0,0.5)]"
+                                    className="group mt-8 flex h-11 w-full items-center justify-center gap-2 rounded-full text-sm font-semibold text-black shadow-[0_0_8px_rgba(239,255,0,0.17)] transition-transform hover:scale-[1.02] hover:shadow-[0_0_13px_rgba(239,255,0,0.25)]"
                                 >
                                     <Send className="w-5 h-5 -ml-1 group-hover:translate-x-1 transition-transform" />
                                     Submit Request

@@ -8,7 +8,7 @@ import { CTA } from "@/components/CTA"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-transparent text-white font-sans selection:bg-[#EFFF00] selection:text-black">
+    <main className="min-h-screen bg-transparent text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
       <Hero />
       <VideoShowcase />
       <Experience />

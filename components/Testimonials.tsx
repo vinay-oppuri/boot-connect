@@ -31,13 +31,13 @@ const reviews = [
 
 export function Testimonials() {
     return (
-        <section className="relative border-t border-white/5 bg-transparent py-16 sm:py-24" id="reviews">
+        <section className="relative bg-transparent py-16 sm:py-24" id="reviews">
             <div className="container mx-auto max-w-6xl px-6 md:px-4">
                 <div className="mb-10 text-center sm:mb-16">
                     <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl md:text-5xl">
                         Trusted by Top Creators
                     </h2>
-                    <p className="text-sm text-gray-400 sm:text-base">See what our clients have to say about their editors.</p>
+                    <p className="text-sm text-muted-foreground sm:text-base">See what our clients have to say about their editors.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -49,11 +49,11 @@ export function Testimonials() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                         >
-                            <Card className="h-full bg-white/5 border-white/10 transition-colors hover:border-[#EFFF00]/50">
+                            <Card className="h-full bg-card/50 border-border transition-colors hover:border-primary/50">
                                 <CardContent className="p-6 sm:p-8">
                                     <div className="mb-5 flex gap-1 sm:mb-6">
                                         {[...Array(review.rating)].map((_, i) => (
-                                            <Star key={i} className="h-4 w-4 fill-current text-[#EFFF00] sm:h-5 sm:w-5" />
+                                            <Star key={i} className="h-4 w-4 fill-current text-primary sm:h-5 sm:w-5" />
                                         ))}
                                     </div>
 
@@ -68,7 +68,7 @@ export function Testimonials() {
                                         </Avatar>
                                         <div>
                                             <h4 className="text-white font-bold">{review.name}</h4>
-                                            <p className="text-sm text-gray-400">{review.role}</p>
+                                            <p className="text-sm text-muted-foreground">{review.role}</p>
                                         </div>
                                     </div>
                                 </CardContent>
