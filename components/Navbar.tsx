@@ -46,8 +46,8 @@ export function Navbar() {
                             }
                         }}
                     >
-                        <span className="text-base font-bold tracking-tight text-white sm:text-xl">
-                            Boot<span className="text-primary">Connect</span>
+                        <span className="text-sm font-bold tracking-tight text-white sm:text-lg md:text-xl">
+                            Booby🍒<span className="text-primary">Connect</span>
                         </span>
                     </Link>
 
@@ -72,11 +72,11 @@ export function Navbar() {
                         <Button
                             asChild
                             size="sm"
-                            className="hidden h-10 rounded-full px-5 text-sm font-semibold shadow-[0_0_7px_rgba(239,255,0,0.14)] transition-all hover:shadow-[0_0_12px_rgba(239,255,0,0.25)] md:inline-flex"
+                            className="hidden h-9 sm:h-10 rounded-full px-4 sm:px-5 text-xs sm:text-sm font-semibold shadow-[0_0_7px_rgba(239,255,0,0.14)] transition-all hover:shadow-[0_0_12px_rgba(239,255,0,0.25)] md:inline-flex"
                         >
                             <Link href="/join" aria-current={pathname === "/join" ? "page" : undefined}>
                                 Join as Editor
-                                <ArrowUpRight className="ml-1 h-4 w-4" />
+                                <ArrowUpRight className="ml-1 h-3.5 w-3.5 sm:h-4 sm:w-4" />
                             </Link>
                         </Button>
                         <button
@@ -84,7 +84,7 @@ export function Navbar() {
                             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
                             aria-expanded={menuOpen}
                             onClick={() => setMenuOpen((open) => !open)}
-                            className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/50 text-white transition-colors hover:bg-white/10 md:hidden"
+                            className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-border bg-card/50 text-white transition-colors hover:bg-white/10 md:hidden"
                         >
                             {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
                         </button>

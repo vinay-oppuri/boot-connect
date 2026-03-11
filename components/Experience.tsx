@@ -13,15 +13,15 @@ export function Experience() {
                     transition={{ duration: 0.8 }}
                     className="text-center max-w-4xl mx-auto"
                 >
-                    <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.35em] text-muted-foreground sm:mb-4 sm:text-sm">
+                    <div className="mb-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-muted-foreground sm:mb-4 sm:text-xs md:text-sm md:tracking-[0.35em]">
                         Elite Talent At Your Fingertips
                     </div>
 
-                    <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-6xl">
+                    <h2 className="text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
                         Access <span className="text-primary">3 YEARS</span> of editing expertise in minutes
                     </h2>
 
-                    <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-muted-foreground sm:mt-8 sm:text-lg">
+                    <p className="mx-auto mt-5 max-w-2xl text-xs sm:text-sm leading-relaxed text-muted-foreground sm:mt-8 md:text-base lg:text-lg">
                         Stop gambling on unreliable freelancers. Our curated roster of editors has spent years mastering viewer retention, cinematic storytelling, and algorithmic growth so you can focus on creating.
                     </p>
                 </motion.div>

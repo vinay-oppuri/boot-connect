@@ -17,20 +17,20 @@ export default async function AdminPage() {
     const users = await db.select().from(usersTable);
 
     return (
-        <div className="container mx-auto py-24 px-4 min-h-screen">
-            <div className="flex justify-between items-center mb-8">
-               <h1 className="text-3xl font-bold">Admin Dashboard</h1>
+        <div className="container mx-auto py-8 px-4 mt-24 min-h-screen max-w-7xl sm:mt-32">
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center mb-6 sm:mb-8">
+               <h1 className="text-xl font-semibold uppercase text-foreground/80 tracking-[0.2em] sm:text-2xl md:text-3xl md:tracking-[0.25em]">Admin Dashboard</h1>
                <LogoutButton />
             </div>
 
             <Tabs defaultValue="editors" className="w-full">
-                <TabsList className="mb-4">
+                <TabsList className="mb-4 bg-white/20">
                     <TabsTrigger value="editors">Editors ({editors.length})</TabsTrigger>
                     <TabsTrigger value="users">Customers ({users.length})</TabsTrigger>
                 </TabsList>
                 
                 <TabsContent value="editors">
-                    <div className="rounded-md border border-border">
+                    <div className="rounded-md border border-border bg-white/10">
                         <Table>
                             <TableHeader>
                                 <TableRow>
@@ -38,7 +38,7 @@ export default async function AdminPage() {
                                     <TableHead>Email</TableHead>
                                     <TableHead>Category</TableHead>
                                     <TableHead>Status</TableHead>
-                                    <TableHead className="text-right">Actions</TableHead>
+                                    <TableHead className="text-center">Actions</TableHead>
                                 </TableRow>
                             </TableHeader>
                             <TableBody>
@@ -69,14 +69,14 @@ export default async function AdminPage() {
                 </TabsContent>
 
                 <TabsContent value="users">
-                    <div className="rounded-md border border-border">
+                    <div className="rounded-md border border-border bg-white/10">
                         <Table>
                             <TableHeader>
                                 <TableRow>
                                     <TableHead>Name</TableHead>
                                     <TableHead>Email</TableHead>
                                     <TableHead>Registered</TableHead>
-                                    <TableHead className="text-right">Actions</TableHead>
+                                    <TableHead className="text-center">Actions</TableHead>
                                 </TableRow>
                             </TableHeader>
                             <TableBody>

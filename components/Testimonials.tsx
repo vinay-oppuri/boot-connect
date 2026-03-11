@@ -31,16 +31,16 @@ const reviews = [
 
 export function Testimonials() {
     return (
-        <section className="relative bg-transparent py-16 sm:py-24" id="reviews">
-            <div className="container mx-auto max-w-6xl px-6 md:px-4">
-                <div className="mb-10 text-center sm:mb-16">
-                    <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl md:text-5xl">
+        <section className="relative bg-transparent py-14 sm:py-24" id="reviews">
+            <div className="container mx-auto max-w-6xl px-4 md:px-6">
+                <div className="mb-8 text-center sm:mb-16">
+                    <h2 className="mb-3 text-2xl font-bold text-white sm:text-3xl md:text-5xl">
                         Trusted by Top Creators
                     </h2>
-                    <p className="text-sm text-muted-foreground sm:text-base">See what our clients have to say about their editors.</p>
+                    <p className="text-xs text-muted-foreground sm:text-sm md:text-base">See what our clients have to say about their editors.</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                     {reviews.map((review, index) => (
                         <motion.div
                             key={index}
@@ -50,25 +50,25 @@ export function Testimonials() {
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                         >
                             <Card className="h-full bg-card/50 border-border transition-colors hover:border-primary/50">
-                                <CardContent className="p-6 sm:p-8">
-                                    <div className="mb-5 flex gap-1 sm:mb-6">
+                                <CardContent className="p-4 sm:p-6 md:p-8">
+                                    <div className="mb-4 flex gap-1 sm:mb-6">
                                         {[...Array(review.rating)].map((_, i) => (
-                                            <Star key={i} className="h-4 w-4 fill-current text-primary sm:h-5 sm:w-5" />
+                                            <Star key={i} className="h-3 w-3 fill-current text-primary sm:h-4 sm:w-4 md:h-5 md:w-5" />
                                         ))}
                                     </div>
 
-                                    <p className="mb-6 text-base leading-7 text-gray-300 italic sm:mb-8 sm:text-lg">
+                                    <p className="mb-5 text-sm leading-relaxed text-gray-300 italic sm:mb-8 sm:text-base md:text-lg">
                                         &ldquo;{review.text}&rdquo;
                                     </p>
 
-                                    <div className="flex items-center gap-4">
-                                        <Avatar className="w-12 h-12 border border-white/20">
+                                    <div className="flex items-center gap-3 sm:gap-4">
+                                        <Avatar className="w-10 h-10 sm:w-12 sm:h-12 border border-white/20">
                                             <AvatarImage src={review.image} alt={review.name} />
                                             <AvatarFallback>{review.name[0]}</AvatarFallback>
                                         </Avatar>
                                         <div>
-                                            <h4 className="text-white font-bold">{review.name}</h4>
-                                            <p className="text-sm text-muted-foreground">{review.role}</p>
+                                            <h4 className="text-sm font-bold text-white sm:text-base">{review.name}</h4>
+                                            <p className="text-xs text-muted-foreground sm:text-sm">{review.role}</p>
                                         </div>
                                     </div>
                                 </CardContent>

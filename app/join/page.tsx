@@ -54,18 +54,18 @@ export default function JoinPage() {
             <section className="container relative mx-auto max-w-6xl px-6 md:px-4">
                 <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
                     <div className="max-w-2xl">
-                        <Badge variant="secondary" className="border border-border bg-card/50 px-4 py-1.5 text-[10px] tracking-[0.2em] text-foreground uppercase">
+                        <Badge variant="secondary" className="border border-border bg-card/50 px-3 py-1 sm:px-4 sm:py-1.5 text-[10px] tracking-[0.2em] text-foreground uppercase">
                             Join the editor network
                         </Badge>
 
-                        <h1 className="mt-6 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
+                        <h1 className="mt-5 text-2xl font-extrabold leading-tight tracking-tight text-white sm:mt-6 sm:text-4xl md:text-5xl">
                             Send your sharpest edits.
                             <span className="mt-2 block text-primary drop-shadow-[0_0_7px_rgba(239,255,0,0.17)]">
                                 Get considered for BootConnect.
                             </span>
                         </h1>
 
-                        <p className="mt-6 max-w-xl text-sm leading-6 text-muted-foreground sm:text-base">
+                        <p className="mt-5 max-w-xl text-xs leading-relaxed text-muted-foreground sm:mt-6 sm:text-base">
                             We are building a curated editor roster for creators, brands, and growth teams that need more than basic cuts. Share the work that best represents your taste and range.
                         </p>
 

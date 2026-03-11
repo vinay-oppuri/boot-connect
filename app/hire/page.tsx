@@ -55,16 +55,16 @@ export default function HirePage() {
                         transition={{ duration: 0.5 }}
                         className="max-w-2xl"
                     >
-                        <div className="inline-flex items-center rounded-full border border-border bg-card/50 px-4 py-1.5 text-[10px] font-semibold tracking-[0.2em] text-foreground uppercase">
+                        <div className="inline-flex items-center rounded-full border border-border bg-card/50 px-3 py-1 sm:px-4 sm:py-1.5 text-[10px] font-semibold tracking-[0.2em] text-foreground uppercase">
                             BootConnect Creatives
                         </div>
-                        <h1 className="mt-6 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
+                        <h1 className="mt-5 text-2xl font-extrabold leading-tight tracking-tight text-white sm:mt-6 sm:text-4xl md:text-5xl">
                             Scale your content.
                         </h1>
-                        <h2 className="mt-2 text-3xl font-extrabold leading-tight tracking-tight text-primary drop-shadow-[0_0_6px_rgba(239,255,0,0.25)] sm:text-4xl md:text-5xl">
+                        <h2 className="mt-2 text-2xl font-extrabold leading-tight tracking-tight text-primary drop-shadow-[0_0_6px_rgba(239,255,0,0.25)] sm:text-4xl md:text-5xl">
                             Hire a top-tier editor.
                         </h2>
-                        <p className="mt-6 max-w-xl text-sm leading-6 text-muted-foreground sm:text-base">
+                        <p className="mt-5 max-w-xl text-xs leading-relaxed text-muted-foreground sm:mt-6 sm:text-base">
                             Stop wasting hours sifting through portfolios. Tell us exactly what you need, and we&apos;ll match you with a vetted professional from our curated network of video editors, thumbnail designers, and copywriters.
                         </p>
 

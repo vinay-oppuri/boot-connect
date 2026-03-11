@@ -47,7 +47,7 @@ export function VideoShowcase() {
                     {[...showcases, ...showcases].map((item, index) => (
                         <div
                             key={index}
-                            className="group relative h-42.5 min-w-60 max-w-100 shrink-0 cursor-pointer overflow-hidden rounded-xl border border-white/5 sm:h-50 sm:min-w-[320px]"
+                            className="group relative h-40 min-w-[200px] max-w-100 shrink-0 cursor-pointer overflow-hidden rounded-xl border border-white/5 sm:h-50 sm:min-w-[320px]"
                         >
                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10 duration-500" />
                             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent z-10" />
@@ -64,9 +64,9 @@ export function VideoShowcase() {
                                 </div>
                             </div>
 
-                            <div className="absolute right-4 bottom-4 left-4 z-20 translate-y-2 transform transition-transform duration-300 group-hover:translate-y-0">
-                                <div className="mb-1 text-[11px] font-semibold text-primary sm:text-xs">{item.category}</div>
-                                <h3 className="text-base font-bold text-white sm:text-lg">{item.title}</h3>
+                            <div className="absolute right-3 bottom-3 left-3 z-20 translate-y-2 transform transition-transform duration-300 group-hover:translate-y-0 sm:right-4 sm:bottom-4 sm:left-4">
+                                <div className="mb-1 text-[10px] font-semibold text-primary sm:text-xs">{item.category}</div>
+                                <h3 className="text-sm font-bold text-white sm:text-lg">{item.title}</h3>
                             </div>
                         </div>
                     ))}

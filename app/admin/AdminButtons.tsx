@@ -83,7 +83,7 @@ export function LogoutButton() {
     }
 
     return (
-        <Button variant="outline" onClick={handleLogout}>
+        <Button variant="destructive" onClick={handleLogout}>
             Logout
         </Button>
     )
