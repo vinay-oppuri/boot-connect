@@ -4,6 +4,8 @@ import Link from "next/link"
 import { ArrowRight, CheckCircle2, Clapperboard, FolderKanban, Sparkles } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 
 export const metadata: Metadata = {
     title: "Join BootConnect | Apply as an Editor",
@@ -35,18 +37,18 @@ const reviewPoints = [
 ]
 
 const inputClassName =
-    "mt-2 h-12 w-full rounded-2xl border border-white/10 bg-black/40 px-4 text-sm text-white outline-none transition placeholder:text-gray-500 focus:border-[#EFFF00]/50 focus:bg-black/60"
+    "mt-2 h-11 w-full rounded-lg border border-white/10 bg-black/40 px-4 text-sm text-white outline-none transition placeholder:text-gray-500 focus:border-[#EFFF00]/50 focus:bg-black/60"
 
 const textareaClassName =
-    "mt-2 min-h-32 w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-500 focus:border-[#EFFF00]/50 focus:bg-black/60"
+    "mt-2 min-h-32 w-full rounded-lg border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-500 focus:border-[#EFFF00]/50 focus:bg-black/60"
 
 export default function JoinPage() {
     return (
-        <main className="relative overflow-hidden bg-[#050505] pt-32 pb-20 sm:pt-36">
+        <main className="relative overflow-hidden bg-transparent pt-32 pb-20 sm:pt-36">
             <div className="pointer-events-none absolute inset-0">
-                <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-white/[0.03] to-transparent" />
+                <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-white/3 to-transparent" />
                 <div className="absolute left-[12%] top-36 h-72 w-72 rounded-full bg-[#EFFF00]/10 blur-[140px]" />
-                <div className="absolute right-[10%] top-24 h-64 w-64 rounded-full bg-white/[0.06] blur-[120px]" />
+                <div className="absolute right-[10%] top-24 h-64 w-64 rounded-full bg-white/6 blur-[120px]" />
             </div>
 
             <section className="container relative mx-auto max-w-6xl px-6 md:px-4">
@@ -74,7 +76,7 @@ export default function JoinPage() {
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </a>
                             </Button>
-                            <Button asChild variant="outline" size="lg" className="rounded-full border-white/15 px-6 text-sm">
+                            <Button asChild variant="outline" size="lg" className="rounded-full bg-transparent border-white/15 px-6 text-sm">
                                 <Link href="/#explore">Browse the current vibe</Link>
                             </Button>
                         </div>
@@ -88,7 +90,7 @@ export default function JoinPage() {
                                         key={item.title}
                                         className="rounded-[28px] border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
                                     >
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-black/40">
+                                        <div className="flex h-11 w-12 items-center justify-center rounded-2xl border border-white/10 bg-black/40">
                                             <Icon className="h-5 w-5 text-[#EFFF00]" />
                                         </div>
                                         <h2 className="mt-4 text-base font-semibold text-white sm:text-lg">{item.title}</h2>
@@ -115,7 +117,7 @@ export default function JoinPage() {
 
                     <div
                         id="application"
-                        className="rounded-[32px] border border-white/10 bg-white/[0.06] p-6 shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-8"
+                        className="rounded-[32px] border border-white/10 bg-white/6 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-8"
                     >
                         <div className="mb-8">
                             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">
@@ -134,7 +136,7 @@ export default function JoinPage() {
                                 <label htmlFor="name" className="text-xs font-medium text-gray-200">
                                     Name
                                 </label>
-                                <input
+                                <Input
                                     type="text"
                                     id="name"
                                     name="name"
@@ -148,7 +150,7 @@ export default function JoinPage() {
                                 <label htmlFor="email" className="text-xs font-medium text-gray-200">
                                     Email
                                 </label>
-                                <input
+                                <Input
                                     type="email"
                                     id="email"
                                     name="email"
@@ -162,7 +164,7 @@ export default function JoinPage() {
                                 <label htmlFor="portfolio-link" className="text-xs font-medium text-gray-200">
                                     Portfolio site or Google Drive link
                                 </label>
-                                <input
+                                <Input
                                     type="url"
                                     id="portfolio-link"
                                     name="portfolio-link"
@@ -175,7 +177,7 @@ export default function JoinPage() {
                                 <label htmlFor="specialty" className="text-xs font-medium text-gray-200">
                                     Editing specialty
                                 </label>
-                                <input
+                                <Input
                                     type="text"
                                     id="specialty"
                                     name="specialty"
@@ -188,7 +190,7 @@ export default function JoinPage() {
                                 <label htmlFor="notes" className="text-xs font-medium text-gray-200">
                                     Notes about your work
                                 </label>
-                                <textarea
+                                <Textarea
                                     id="notes"
                                     name="notes"
                                     className={textareaClassName}
@@ -196,13 +198,13 @@ export default function JoinPage() {
                                 />
                             </div>
 
-                            <div className="rounded-2xl border border-[#EFFF00]/15 bg-[#EFFF00]/[0.06] px-4 py-3 text-xs leading-5 text-gray-300">
+                            <div className="rounded-2xl border border-[#EFFF00]/15 bg-[#EFFF00]/6 px-4 py-3 text-xs leading-5 text-gray-300">
                                 Tip: a tight folder beats a huge folder. Lead with the work that best shows your judgment.
                             </div>
 
                             <Button
                                 type="button"
-                                className="h-12 w-full rounded-full text-sm font-semibold shadow-[0_0_20px_rgba(239,255,0,0.35)] hover:shadow-[0_0_34px_rgba(239,255,0,0.5)]"
+                                className="h-11 w-full rounded-full text-sm font-semibold shadow-[0_0_20px_rgba(239,255,0,0.35)] hover:shadow-[0_0_34px_rgba(239,255,0,0.5)]"
                             >
                                 Send application
                                 <ArrowRight className="ml-2 h-4 w-4" />

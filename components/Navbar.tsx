@@ -72,12 +72,7 @@ export function Navbar() {
                             <Link
                                 key={item.label}
                                 href={item.href}
-                                className={cn(
-                                    "rounded-full px-4 py-2 text-sm font-medium transition-colors",
-                                    item.href === "/" && pathname === "/"
-                                        ? "bg-white/10 text-white"
-                                        : "text-gray-300 hover:bg-white/5 hover:text-white"
-                                )}
+                                className="rounded-full px-4 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
                                 onClick={() => {
                                     if (item.href === "/" && pathname === "/") {
                                         window.scrollTo({ top: 0, behavior: "smooth" })
@@ -93,10 +88,7 @@ export function Navbar() {
                         <Button
                             asChild
                             size="sm"
-                            className={cn(
-                                "hidden h-10 rounded-full px-5 text-sm font-semibold shadow-[0_0_18px_rgba(239,255,0,0.28)] transition-all hover:shadow-[0_0_32px_rgba(239,255,0,0.5)] md:inline-flex",
-                                pathname === "/join" && "ring-1 ring-[#EFFF00]/50 ring-offset-0"
-                            )}
+                            className="hidden h-10 rounded-full px-5 text-sm font-semibold shadow-[0_0_18px_rgba(239,255,0,0.28)] transition-all hover:shadow-[0_0_32px_rgba(239,255,0,0.5)] md:inline-flex"
                         >
                             <Link href="/join" aria-current={pathname === "/join" ? "page" : undefined}>
                                 Join as Editor
@@ -130,12 +122,7 @@ export function Navbar() {
                                         <Link
                                             key={item.label}
                                             href={item.href}
-                                            className={cn(
-                                                "rounded-2xl px-4 py-3 text-sm font-medium transition-colors",
-                                                item.href === "/" && pathname === "/"
-                                                    ? "bg-white/10 text-white"
-                                                    : "text-gray-200 hover:bg-white/5 hover:text-white"
-                                            )}
+                                            className="rounded-2xl px-4 py-3 text-sm font-medium text-gray-200 transition-colors hover:bg-white/5 hover:text-white"
                                             onClick={() => {
                                                 setMenuOpen(false)
 

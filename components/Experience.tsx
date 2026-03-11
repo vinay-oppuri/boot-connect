@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export function Experience() {
     return (
-        <section className="relative overflow-hidden bg-[#050505] py-16 sm:py-24">
+        <section className="relative overflow-hidden bg-transparent py-16 sm:py-24">
             <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#EFFF00]/5 to-transparent blur-[100px] pointer-events-none" />
 
             <div className="container relative z-10 mx-auto px-6 md:px-4">

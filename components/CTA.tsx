@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react"
 
 export function CTA() {
     return (
-        <section className="relative overflow-hidden bg-[#050505] py-20 sm:py-32" id="hire">
-            <div className="pointer-events-none absolute top-1/2 left-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#EFFF00]/10 blur-[150px] sm:h-[600px] sm:w-[600px]" />
+        <section className="relative overflow-hidden bg-transparent py-20 sm:py-32" id="hire">
+            <div className="pointer-events-none absolute top-1/2 left-1/2 h-90 w-90 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#EFFF00]/10 blur-[150px] sm:h-150 sm:w-150" />
 
             <div className="container relative z-10 mx-auto px-6 md:px-4 text-center">
                 <motion.div

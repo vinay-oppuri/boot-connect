@@ -24,7 +24,7 @@ const features = [
 
 export function Features() {
     return (
-        <section className="relative z-10 bg-[#050505] py-16 sm:py-24" id="how-it-works">
+        <section className="relative z-10 bg-transparent py-16 sm:py-24" id="how-it-works">
             <div className="container mx-auto max-w-6xl px-6 md:px-4">
                 <div className="mb-10 text-center sm:mb-16">
                     <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl md:text-5xl">

@@ -33,11 +33,11 @@ const showcases = [
 
 export function VideoShowcase() {
     return (
-        <section className="relative z-20 -mt-10 overflow-hidden bg-[#050505] py-8 sm:-mt-16 sm:py-12">
+        <section className="relative z-20 -mt-10 overflow-hidden bg-transparent py-8 sm:-mt-16 sm:py-12">
             <div className="relative flex w-full overflow-hidden pb-6 sm:pb-8">
                 {/* Gradient Masks for smooth edge fading */}
-                <div className="pointer-events-none absolute left-0 z-30 h-full w-12 bg-linear-to-r from-[#050505] to-transparent sm:w-24" />
-                <div className="pointer-events-none absolute right-0 z-30 h-full w-12 bg-linear-to-l from-[#050505] to-transparent sm:w-24" />
+                <div className="pointer-events-none absolute left-0 z-30 h-full w-12 bg-linear-to-r from-black/70 to-transparent sm:w-24" />
+                <div className="pointer-events-none absolute right-0 z-30 h-full w-12 bg-linear-to-l from-black/70 to-transparent sm:w-24" />
 
                 <motion.div
                     animate={{ x: ["0%", "-50%"] }}
@@ -46,12 +46,12 @@ export function VideoShowcase() {
                         ease: "linear",
                         duration: 35,
                     }}
-                    className="flex w-max shrink-0 gap-3 px-4 hover:[animation-play-state:paused] sm:gap-4"
+                    className="flex w-max shrink-0 gap-3 px-4 hover:paused sm:gap-4"
                 >
                     {[...showcases, ...showcases].map((item, index) => (
                         <div
                             key={index}
-                            className="group relative h-[170px] min-w-[240px] max-w-[400px] shrink-0 cursor-pointer overflow-hidden rounded-xl border border-white/5 sm:h-[200px] sm:min-w-[320px]"
+                            className="group relative h-42.5 min-w-60 max-w-100 shrink-0 cursor-pointer overflow-hidden rounded-xl border border-white/5 sm:h-50 sm:min-w-[320px]"
                         >
                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10 duration-500" />
                             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent z-10" />
