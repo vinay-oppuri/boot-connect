@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation"
 import { AnimatePresence, motion } from "framer-motion"
 import { ArrowUpRight, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
 
 const navItems = [
     { href: "/", label: "Home" },
@@ -74,8 +73,8 @@ export function Navbar() {
                             size="sm"
                             className="hidden h-10 rounded-full px-5 text-sm font-semibold shadow-[0_0_7px_rgba(239,255,0,0.14)] transition-all hover:shadow-[0_0_12px_rgba(239,255,0,0.25)] md:inline-flex"
                         >
-                            <Link href="/join" aria-current={pathname === "/join" ? "page" : undefined}>
-                                Join as Editor
+                            <Link href="/hire" aria-current={pathname === "/hire" ? "page" : undefined}>
+                                Hire an Editor
                                 <ArrowUpRight className="ml-1 h-3.5 w-3.5 sm:h-4 sm:w-4" />
                             </Link>
                         </Button>

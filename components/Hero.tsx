@@ -25,7 +25,7 @@ export function Hero() {
                     <Skeleton className="mb-4 h-6 w-40 rounded-full sm:mb-6 sm:h-9 sm:w-48" />
                     <Skeleton className="mx-auto h-20 w-[80%] max-w-4xl sm:h-32 md:h-52 md:w-[60%]" />
                     <Skeleton className="mx-auto mt-4 h-12 w-[90%] max-w-xl sm:mt-6 sm:h-20 sm:max-w-2xl" />
-                    <Skeleton className="mt-6 h-10 w-36 rounded-full sm:mt-10 sm:h-12 md:h-14 md:w-48" />
+                    <Skeleton className="mt-6 flex flex-col sm:flex-row gap-3 h-10 w-36 rounded-full sm:mt-10 sm:h-12" />
                 </div>
             </section>
         )
@@ -39,7 +39,7 @@ export function Hero() {
                     target="_blank"
                     className="mb-6 inline-flex items-center gap-1.5 rounded-full border border-border bg-card/50 px-3 py-1.5 text-xs text-gray-300 backdrop-blur-sm sm:mb-6 sm:px-4 sm:py-1.5 sm:text-sm"
                 >
-                    <span className="flex h-4 w-4 items-center justify-center rounded-full bg-primary text-black sm:h-5 sm:w-5">
+                    <span className="-ml-2 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-black sm:h-5 sm:w-5">
                         <img
                             src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
                             alt="Avatar"
@@ -76,10 +76,13 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="mt-8 sm:mt-10 flex justify-center w-full px-4 sm:px-0"
+                    className="mt-8 sm:mt-10 flex flex-col sm:flex-row justify-center items-center w-full gap-3 px-4 sm:px-0"
                 >
-                    <Link href="/hire" className="inline-flex w-full sm:w-auto items-center justify-center h-10 sm:h-12 md:h-14 rounded-full text-base font-semibold text-black bg-primary px-8 shadow-[0_0_8px_rgba(239,255,0,0.2)] transition-all hover:shadow-[0_0_14px_rgba(239,255,0,0.3)] md:text-lg">
+                    <Link href="/hire" className="inline-flex w-full sm:w-auto items-center justify-center h-11 sm:h-12 rounded-full text-sm font-semibold text-black bg-primary px-8 shadow-[0_0_8px_rgba(239,255,0,0.2)] transition-all hover:shadow-[0_0_14px_rgba(239,255,0,0.3)] md:text-base">
                         Hire an Editor
+                    </Link>
+                    <Link href="/join" className="inline-flex w-full sm:w-auto items-center justify-center h-11 sm:h-12 rounded-full text-sm font-normal text-white border border-border bg-card/30 px-8 backdrop-blur-sm transition-all hover:border-primary/40 hover:text-primary md:text-base">
+                        Join as Editor
                     </Link>
                 </motion.div>
             </div>

@@ -18,7 +18,7 @@ export function Experience() {
                     </div>
 
                     <h2 className="text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-                        Access <span className="text-primary">3 YEARS</span> of editing expertise in minutes
+                        Access <span className="text-primary">4 YEARS</span> of editing expertise in minutes
                     </h2>
 
                     <p className="mx-auto mt-5 max-w-2xl text-xs sm:text-sm leading-relaxed text-muted-foreground sm:mt-8 md:text-base lg:text-lg">
