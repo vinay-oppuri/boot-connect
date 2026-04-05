@@ -59,8 +59,8 @@ export function VideoShowcase() {
                             />
 
                             <div className="absolute inset-0 z-20 flex scale-50 items-center justify-center opacity-0 transition-opacity duration-300 group-hover:scale-100 group-hover:opacity-100">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/90 shadow-[0_0_8px_rgba(239,255,0,0.25)] backdrop-blur-sm sm:h-12 sm:w-12">
-                                    <Play className="ml-0.5 h-4 w-4 text-black sm:ml-1 sm:h-5 sm:w-5" fill="currentColor" />
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/90 shadow-[0_0_8px_rgba(var(--primary-rgb),0.25)] backdrop-blur-sm sm:h-12 sm:w-12">
+                                    <Play className="ml-0.5 h-4 w-4 text-primary-foreground sm:ml-1 sm:h-5 sm:w-5" fill="currentColor" />
                                 </div>
                             </div>
 

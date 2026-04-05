@@ -67,7 +67,11 @@ void mainImage(out vec4 fragColor,in vec2 fragCoord){
 
 void main(){
     vec4 col;mainImage(col,gl_FragCoord.xy);
-    col.rgb=hueShiftRGB(col.rgb,uHueShift);
+    float intensity = dot(col.rgb, vec3(0.299, 0.587, 0.114));
+    vec3 darkCrimson = vec3(0.6, 0.106, 0.106); // #991B1B
+    vec3 neonRed = vec3(0.863, 0.149, 0.149); // #DC2626
+    vec3 tint = mix(darkCrimson, neonRed, intensity * 1.2);
+    col.rgb = tint * (intensity * 1.5);
     float scanline_val=sin(gl_FragCoord.y*uScanFreq)*0.5+0.5;
     col.rgb*=1.-(scanline_val*scanline_val)*uScan;
     col.rgb+=(rand(gl_FragCoord.xy+uTime)-0.5)*uNoise;

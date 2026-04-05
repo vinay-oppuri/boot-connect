@@ -24,7 +24,7 @@ export function CTA() {
 
                     <Button
                         size="lg"
-                        className="h-11 rounded-full px-6 text-sm font-bold shadow-[0_0_8px_rgba(239,255,0,0.2)] transition-all hover:shadow-[0_0_16px_rgba(239,255,0,0.3)] sm:h-12 sm:px-8 sm:text-base md:h-14 md:text-lg"
+                        className="h-11 rounded-full px-6 text-sm font-bold shadow-[0_0_8px_rgba(var(--primary-rgb),0.2)] transition-all hover:shadow-[0_0_16px_rgba(var(--primary-rgb),0.3)] sm:h-12 sm:px-8 sm:text-base md:h-14 md:text-lg"
                     >
                         Start Hiring Editors
                         <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />

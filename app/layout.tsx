@@ -41,7 +41,7 @@ export default function RootLayout({
         <div className="pointer-events-none fixed inset-0 z-0">
           <div className="absolute inset-0 w-full h-full opacity-95 filter-[saturate(0.6)_contrast(1.15)_brightness(0.75)]">
             <DarkVeil
-              hueShift={64}
+              hueShift={300}
               noiseIntensity={0.008}
               scanlineIntensity={0.012}
               speed={0.22}

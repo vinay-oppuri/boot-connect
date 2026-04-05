@@ -175,7 +175,7 @@ export default function HirePage() {
 
                             <Button
                                 type="submit"
-                                className="group mt-2 flex h-11 w-full items-center justify-center gap-2 rounded-full text-sm font-semibold text-black shadow-[0_0_8px_rgba(239,255,0,0.17)] transition-transform hover:scale-[1.02] hover:shadow-[0_0_13px_rgba(239,255,0,0.25)]"
+                                className="group mt-2 flex h-11 w-full items-center justify-center gap-2 rounded-full text-sm font-semibold text-primary-foreground shadow-[0_0_8px_rgba(var(--primary-rgb),0.17)] transition-transform hover:scale-[1.02] hover:shadow-[0_0_13px_rgba(var(--primary-rgb),0.25)]"
                             >
                                 <Send className="w-4 h-4 -ml-1 group-hover:translate-x-1 transition-transform" />
                                 Submit Request

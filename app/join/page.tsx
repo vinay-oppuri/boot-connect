@@ -120,7 +120,7 @@ export default function JoinPage() {
 
                         <Button
                             type="button"
-                            className="h-11 w-full rounded-full text-sm font-semibold shadow-[0_0_8px_rgba(239,255,0,0.17)] hover:shadow-[0_0_13px_rgba(239,255,0,0.25)]"
+                            className="h-11 w-full rounded-full text-sm font-semibold shadow-[0_0_8px_rgba(var(--primary-rgb),0.17)] hover:shadow-[0_0_13px_rgba(var(--primary-rgb),0.25)]"
                         >
                             Send application
                             <ArrowRight className="ml-2 h-4 w-4" />

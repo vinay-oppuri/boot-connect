@@ -71,7 +71,7 @@ export function Navbar() {
                         <Button
                             asChild
                             size="sm"
-                            className="hidden h-10 rounded-full px-5 text-sm font-semibold shadow-[0_0_7px_rgba(239,255,0,0.14)] transition-all hover:shadow-[0_0_12px_rgba(239,255,0,0.25)] md:inline-flex"
+                            className="hidden h-10 rounded-full px-5 text-sm font-semibold shadow-[0_0_7px_rgba(var(--primary-rgb),0.14)] transition-all hover:shadow-[0_0_12px_rgba(var(--primary-rgb),0.25)] md:inline-flex"
                         >
                             <Link href="/hire" aria-current={pathname === "/hire" ? "page" : undefined}>
                                 Hire an Editor
@@ -121,7 +121,7 @@ export function Navbar() {
                                 <div className="mt-3 border-t border-border pt-3">
                                     <Button
                                         asChild
-                                        className="h-11 w-full rounded-full text-sm font-semibold shadow-[0_0_7px_rgba(239,255,0,0.14)] transition-all hover:shadow-[0_0_12px_rgba(239,255,0,0.25)]"
+                                        className="h-11 w-full rounded-full text-sm font-semibold shadow-[0_0_7px_rgba(var(--primary-rgb),0.14)] transition-all hover:shadow-[0_0_12px_rgba(var(--primary-rgb),0.25)]"
                                     >
                                         <Link href="/join" onClick={() => setMenuOpen(false)}>
                                             Join as Editor

@@ -57,7 +57,7 @@ export function Hero() {
                     className="mx-auto max-w-4xl text-[40px] leading-[1.05] font-extrabold tracking-tight text-white sm:text-5xl lg:text-7xl"
                 >
                     NOT JUST A{" "}
-                    <span className="mt-2 block text-primary drop-shadow-[0_0_6px_rgba(239,255,0,0.25)]">
+                    <span className="mt-2 block text-primary drop-shadow-[0_0_6px_rgba(var(--primary-rgb),0.25)]">
                         VIDEO EDITING MARKETPLACE
                     </span>
                 </motion.h1>
@@ -78,7 +78,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="mt-8 sm:mt-10 flex flex-col sm:flex-row justify-center items-center w-full gap-3 px-4 sm:px-0"
                 >
-                    <Link href="/hire" className="inline-flex w-full sm:w-auto items-center justify-center h-11 sm:h-12 rounded-full text-sm font-semibold text-black bg-primary px-8 shadow-[0_0_8px_rgba(239,255,0,0.2)] transition-all hover:shadow-[0_0_14px_rgba(239,255,0,0.3)] md:text-base">
+                    <Link href="/hire" className="inline-flex w-full sm:w-auto items-center justify-center h-11 sm:h-12 rounded-full text-sm font-semibold text-primary-foreground bg-primary px-8 shadow-[0_0_8px_rgba(var(--primary-rgb),0.2)] transition-all hover:shadow-[0_0_14px_rgba(var(--primary-rgb),0.3)] md:text-base">
                         Hire an Editor
                     </Link>
                     <Link href="/join" className="inline-flex w-full sm:w-auto items-center justify-center h-11 sm:h-12 rounded-full text-sm font-normal text-white border border-border bg-card/30 px-8 backdrop-blur-sm transition-all hover:border-primary/40 hover:text-primary md:text-base">

@@ -59,7 +59,7 @@ export default function LoginPage() {
                     </div>
                     <Button 
                         type="submit" 
-                        className="w-full rounded-full shadow-[0_0_12px_rgba(239,255,0,0.2)] hover:shadow-[0_0_20px_rgba(239,255,0,0.3)] transition-all"
+                        className="w-full rounded-full shadow-[0_0_12px_rgba(var(--primary-rgb),0.2)] hover:shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)] transition-all"
                         disabled={loading}
                     >
                         {loading ? "Authenticating..." : "Login"}
